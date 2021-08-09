@@ -55,7 +55,7 @@ class Game{
             else if(keyDown(DOWN_ARROW)){
                 this.changePosition(0,speed);
             }
-            if(cars[player.id-1].y < -height*6){
+            if(cars[player.id-1].y < -height*5){
                 database.ref("rank").once("value").then((data)=>{
                     rank= data.val() + 1;
                     database.ref("/").update({
